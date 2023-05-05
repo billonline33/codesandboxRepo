@@ -1,5 +1,5 @@
 import "./styles.css";
-import add from './add'
+import { plus } from "./add";
 
 document.getElementById("app").innerHTML = `
 <h1>Hello Vanilla!</h1>
@@ -10,4 +10,4 @@ document.getElementById("app").innerHTML = `
 </div>
 `;
 
-console.log(add(2,3))
+console.log(plus(2, 3));

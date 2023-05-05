@@ -173,18 +173,27 @@ var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 },{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/add.js":[function(require,module,exports) {
-function add(a, b) {
+// function plus(a,b) {
+//   return a+b
+// }
+
+// const times= (a, b) => {return a*b}
+
+// module.exports = {plus, times};
+
+exports.plus = function (a, b) {
   return a + b;
-}
-module.exports = add;
+};
+exports.times = function (a, b) {
+  return a * b;
+};
 },{}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 require("./styles.css");
-var _add = _interopRequireDefault(require("./add"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _add = require("./add");
 document.getElementById("app").innerHTML = "\n<h1>Hello Vanilla!</h1>\n<div>\n  We use the same configuration as Parcel to bundle this sandbox, you can find more\n  info about Parcel \n  <a href=\"https://parceljs.org\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.\n</div>\n";
-console.log((0, _add.default)(2, 3));
+console.log((0, _add.plus)(2, 3));
 },{"./styles.css":"src/styles.css","./add":"src/add.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -210,7 +219,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65464" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49795" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
