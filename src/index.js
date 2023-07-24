@@ -11,3 +11,5 @@ document.getElementById("app").innerHTML = `
 `;
 
 console.log(plus(2, 3));
+
+console.log(plus(2, 4));
